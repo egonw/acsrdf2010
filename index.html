@@ -12,6 +12,27 @@
     <meta property="dc:creator" content="Egon Willighagen" />
     <link rel="meta" type="application/rdf+xml" href="http://www.w3.org/2007/08/pyRdfa/extract?uri=http%3A%2F%2Fegonw.github.com%2Facsrdf2010%2F"/>
     <link rel="stylesheet" type="text/css" href="layout.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"
+            type="text/javascript" />
+    <script type='text/javascript'>
+	function init() {
+		$(".showing").toggle(
+		function()
+			{
+			$(this).next().next().show("slow");
+			$(this).text("Hide Abstract");
+			return false;
+			},
+		function()
+			{
+			$(this).next().next().hide("fast");
+			$(this).text("Abstract");
+			return false;
+			}
+		);
+	}
+	$(document).ready(init);
+    </script>
   </head>
   <body>
   <div class="container">
@@ -54,6 +75,161 @@
       <img src="graphics/wordle.cinf003.png" width="200"
            alt="Wordle for CINF003" />
     </p>
+    <table>
+    <tr>
+      <td width="10%"><b>Time</b></td>
+      <td width="30%"><b>Speaker</b></td>
+      <td><b>Title</b></td>
+    </tr>
+    <tr>
+      <td>9:00</td>
+      <td>Chair</td>
+      <td>Introduction</td>
+    </tr>
+    <tr>
+      <td>9:10</td>
+      <td>Leonid Chepelev</td>
+      <td><b>Semantic envelopment of cheminformatics resources with SADI</b>
+        <a href="javascript:;" class="showing">Abstract</a><br />
+        <div class="hidden">
+The distribution of computational resources as web services and their execution
+as workflows has enabled facile computation and data integration for bio− and
+cheminformatics. The Semantic Automated Discovery and Integration (SADI)
+framework addresses many shortcomings of similar frameworks, such as SSWAP and
+BioMoby, while allowing for more efficient semantic envelopment of computational
+chemistry services, resource discovery, and automated workflow organization. In
+this work, we apply the CHEMINF ontology and Chemical Entity Semantic
+Specification and demonstrate the usability of the SADI framework in solving
+common cheminformatics problems starting from RDF−based chemical entity
+representations. Our eventual goal is to convert all of the functions and
+functionalities of the Chemistry Development Kit (CDK) into distinct SADI
+services. This would enable the formulation of all cheminformatics problems
+currently addressed by CDK, as SPARQL queries, returning meaningful RDF output
+which can then be easily integrated with existing RDF−based knowledgebases or
+used for further processing.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>9:55</td>
+      <td>Nina Jeliazkova</td>
+      <td><b>RESTful RDF Web Services for Predictive Toxicology</b>
+        <a href="javascript:;" class="showing">Abstract</a><br />
+        <div class="hidden">
+The Open Source Predictive Toxicology Framework http://www.opentox.org,
+developed by partners of the EC FP7 OpenTox project , aims at providing a
+unified access to toxicity data and predictive models, as well as validation
+procedures. This is achieved by i) an information model, based on a common
+OWL−DL ontology http://www.opentox.org/api/1.1/opentox.owl ii) flexibility by
+linking with related ontologies; iii) availability of data and algorithms via a
+standardized REST web services interface, where every compound, data set or
+predictive method has an unique web address, used to retrieve its RDF
+representation, or initiate the calculations. The OpenTox framework allows
+building user−friendly applications for toxicological experts or model
+developers, or direct access by an application programming interface for
+development, integration and validation of new algorithms. The work presented
+describes the experience of building RESTful web services, based on RDF
+representation of resources, to incorporate diverse IT solutions into a
+distributed and interoperable system.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>10:25</td>
+      <td></td>
+      <td>Intermission</td>
+    </tr>
+    <tr>
+      <td>10:40</td>
+      <td about="#egonw">Egon Willighagen</td>
+      <td><b>Linking the Resource Description Framework to Cheminformatics and
+          Proteochemometrics</b>
+        <a href="javascript:;" class="showing">Abstract</a><br />
+        <div class="hidden">
+Semantic web technologies are finding their way into the life sciences.
+Ontologies and semantic markup have already been used for more than a decade in
+molecular sciences, but have not found widespread use yet. The semantic web
+technology Resource Description Framework (RDF) and related methods show to be
+sufficiently versatile to change that situation. The work presented here focuses
+on linking RDF approaches to existing molecular chemometrics fields, including
+cheminformatics, QSAR modeling and proteochemometrics. Applications are
+presented that link RDF technologies to methods from statistics and
+cheminformatics, including data aggregation, visualization, chemical
+identification, and property prediction. They demonstrate how this can be done
+using various existing RDF standards and cheminformatics libraries. For example,
+we show how IC50 and Ki values are modeled for a number of biological targets
+using data from the chEMBL database. We have shown that existing RDF standards
+can suitably be integrated into existing molecular chemometrics methods.
+Platforms that unite these technologies, like Bioclipse, makes this even simpler
+and more transparent. Being able to create and share workflows that integrate
+data aggregation and analysis (visual and statistical) is beneficial to
+interoperability and reproducibility. The current work shows that RDF approaches
+are sufficiently powerful to support molecular chemometrics workflows.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>11:10</td>
+      <td>Stephan Heineke</td>
+      <td><b>Chemical e−Science Information Cloud (ChemCloud): A Semantic Web
+        based eScience infrastructure</b>
+        <a href="javascript:;" class="showing">Abstract</a><br />
+        <div class="hidden">
+Our Chemical e−Science Information Cloud (ChemCloud) − a Semantic Web based
+eScience infrastructure − integrates and automates a multitude of databases,
+tools and services in the domain of chemistry, pharmacy and bio−chemistry
+available at the Fachinformationszentrum Chemie (FIZ Chemie), at the Freie
+Universitaet Berlin (FUB), and on the public Web. Based on the approach of the
+W3C Linked Open Data initiative and the W3C Semantic Web technologies for
+ontologies and rules it semantically links and integrates knowledge from our W3C
+HCLS knowledge base hosted at the FUB, our multi−domain knowledge base DBpedia
+(Deutschland) implemented at FUB, which is extracted from Wikipedia (De)
+providing a public semantic resource for chemistry, and our well−established
+databases at FIZ Chemie such as ChemInform for organic reaction data, InfoTherm
+the leading source for thermophysical data, Chemisches Zentralblatt, the
+complete chemistry knowledge from 1830 to 1969, and ChemgaPedia the largest and
+most frequented e−Learning platform for Chemistry and related sciences in German
+language.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>11:40</td>
+      <td>Anay Tamhankar</td>
+      <td><b>Use of semantic web services to access small molecule ligand database</b>
+        <a href="javascript:;" class="showing">Abstract</a><br />
+        <div class="hidden">
+Resource Description Framework (RDF) and a set of associated technologies like
+OWL, SPARQL etc..., which form the W3C's semantic web technology stack, are
+renewing interest in semantic chemistry. Semantic Web Services not only specify
+syntactic interoperability but also specify and enforce the semantic constraints
+of messages being transmitted and objects being accessed. Liceptor database is a
+small molecule ligand database consisting of approximately 4 million compounds.
+The database schema consists of fields like molecular properties (2D−structure,
+molecular weight, molecular formula etc...), molecular descriptors (H−donors,
+H−acceptors, logP, logD number of rotational bonds etc...) and pharmacological
+properties (bio−assays, receptors, enzymes, parameters, animal models,
+therapeutic indications etc...). Pharmaceutical and Bio−Technology companies use
+this database to mine chemical space for internal research, to prioritize QSAR
+and pharmacophore studies, for synthetic chemistry endeavors and for advancing
+hit−to−lead patterns. The database records are available in multiple formats
+(relational database, XML, Rdfile etc...) as well as available online through an
+interactive web application (html format). The soon to be released version of
+the database includes access using semantic web services. The ontology is
+expressed in OWL and RDF defines the overall framework. Typical consumers of the
+data using this access mechanism are expected to be third−party tool vendors and
+data aggregators. Use of semantic web services allows evolution of the schema
+over time without explicitly communicating the change as well as requiring all
+data consumers to be changed.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>12:10</td>
+      <td></td>
+      <td>End</td>
+    </tr>
+    </table>
 
     <h3>CINF0031: RDF and Ontologies</h3>
     <p>Monday, 9:00-12:30 <br />
