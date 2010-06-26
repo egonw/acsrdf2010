@@ -38,3 +38,7 @@ div.content {
  padding: 1em;
  font-size: 12pt;
 }
+
+.hidden {
+  display: none;
+}
