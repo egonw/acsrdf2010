@@ -13,7 +13,7 @@ Option 1
 From the command line, your workflow could look like:
 
  git clone git://github.com/egonw/acsrdf2010.git
- git checkout gh_pages origin/gh_pages
+ git checkout gh-pages origin/gh-pages
 
 Then add the RDFa to your abstract:
 
