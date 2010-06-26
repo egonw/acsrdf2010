@@ -11,14 +11,26 @@
     <base href="http://egonw.github.com/acsrdf2010/" />
     <meta property="dc:creator" content="Egon Willighagen" />
     <link rel="meta" type="application/rdf+xml" href="http://www.w3.org/2007/08/pyRdfa/extract?uri=http%3A%2F%2Fegonw.github.com%2Facsrdf2010%2F"/>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
   </head>
   <body>
+  <div class="container">
+  <div class="sidebar">
+   <b>ACSRDF2010</b>
+   <ul>
+     <li><a href="#know">What you need to know</a></li>
+     <li><a href="#register">Registration</a></li>
+     <li><a href="#program">Program</a></li>
+     <li><a href="#organizers">Organizers</a></li>
+   </ul>
+  </div>
+  <div class="content">
     <h1 about="#meeting" property="cal:summary">ACS RDF Symposium, Boston, August 2010</h1>
     <p about="#meeting">
       The meeting will be at the <span rel="cal:location">Boston Convention &amp; Exhibition Center</span>
       from <span property="cal:dtstart">2010-08-22</span> to <span property="cal:dtend">2010-08-23</span>.
     </p>
-    <h2>What you need to know</h2>
+    <h2 id="know">What you need to know</h2>
     <p>
       The symposium is using the tag <i>acsrdf2010</i>. You can subscribe to
       these channels to keep informed:
@@ -29,13 +41,13 @@
     <p>
       Premeeting discussions can be held at <a href="https://groups.google.com/group/acsrdf2010?lnk=gcimh">this mailing list</a>.
     </p>
-    <h2>Registration</h2>
+    <h2 id="register">Registration</h2>
     <p>
       Registration is done via the <a href="https://www.xpressreg.net/register/acsf080/start.asp">ACS website</a>.
       Further information can be requested on the aforementioned mailing list, or
       directly with the organizers.
     </p>
-    <h2>Program</h2>
+    <h2 id="program">Program</h2>
 
     <h3>CINF003: RDF and Computation</h3>
     <p>Sunday, 9:00-12:30 <br />
@@ -55,7 +67,7 @@
            alt="Wordle for CINF032" />
     </p>
 
-    <h2>Organizers</h2>
+    <h2 id="organizers">Organizers</h2>
     <p>
       <span about="#egonw">
         <a href="http://chem-bla-ics.blogspot.com"
@@ -67,10 +79,14 @@
            rel="foaf:weblog"
            property="foaf:name">Rajarshi Guha</a></span>.
     </p>
+  </div>
 
+  <div class="footer">
     <hr />
     <p>
       <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" /></a>
     </p>
+  </div>
+  </div>
   </body>
 </html>
