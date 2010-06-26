@@ -382,10 +382,169 @@ provided by linking with domain specific ontologies.
     </table>
 
     <h3>CINF0032: RDF and Chemical Applications</h3>
-    <p>Monday, 14:00-17:30 <br />
+    <p>Monday, 13:00-16:15<br />
       <img src="graphics/wordle.cinf0032.png" width="200"
            alt="Wordle for CINF032" />
     </p>
+    <table>
+    <tr>
+      <td style="width: 10%"><b>Time</b></td>
+      <td style="width: 30%"><b>Speaker</b></td>
+      <td><b>Title</b></td>
+    </tr>
+    <tr>
+      <td>13:00</td>
+      <td>Chair</td>
+      <td>Introduction</td>
+    </tr>
+    <tr>
+      <td>13:15</td>
+      <td>Eric Prud'hommeaux</td>
+      <td><b>Overview of the linking open drug data task</b>
+        <a href="javascript:;" onclick="javascript: $(this).next().toggle('slow');">Abstract</a>
+        <div class="hidden">
+There is much interesting information about drugs that is available on the Web.
+Data sources range from medicinal chemistry results, to the impacts of drugs on
+gene expression, through to the results of drugs in clinical trials. Linking
+Open Drug Data (LODD) is a task within the W3C's Health Care Life Sciences
+Interest Group. LODD has surveyed publicly available data sets about drugs,
+created Linked Data representations of the data sets and interlinked them
+together, and identified interesting scientific and business questions that can
+be answered once the data sets are connected. The task also actively explores
+best practices for exposing data in a Linked Data representation The figure
+below shows part of the data sets that have been published and interlinked by
+the task so far. The LODD data sets are represented in dark gray, while light
+gray represents other Linked Data from the life sciences, and white indicates
+data sets from different domains. Collectively, the LODD data sets consist of
+over 8 million RDF triples, which are interlinked by more than 370,000 RDF
+links. This presentation will introduce the LODD task and show examples of
+recent.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>14:00</td>
+      <td>Jeremy Frey</td>
+      <td><b> Control, monitoring, analysis and dissemination of laboratory
+        physical chemistry experiments using semantic web and broker technologies</b>
+        <a href="javascript:;" onclick="javascript: $(this).next().toggle('slow');">Abstract</a>
+        <div class="hidden">
+A suite of software was developed to control and monitor experimental and
+environmental data and used for probing of the air/water interface using Second
+Harmonic Generation. A centralised message broker enabled a common communication
+protocol between all objects in the system; experimental apparatus, data
+loggers, storage solutions and displays. The data and context are captured and
+represented in ways compatible with the Semantic Web. Experimental plans and the
+enactment are described using the oreChem experiments ontology; this provides
+the means to capture the metadata associated with the experimental process and
+the resulting data. Environmental data was stored in the Open Geospatial
+Consortium Sensor Observation Service (SOS). The SOS is part of the Sensor Web
+Enablement architecture; this describes a number of interoperable interfaces and
+metadata encodings for integrating sensors webs into the cloud. A mashup web
+interface was produced to link all these sources of information from a single
+point.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>14:30</td>
+      <td>Chair</td>
+      <td>Intermission</td>
+    </tr>
+    <tr>
+      <td>14:45</td>
+      <td>Dave Jessop</td>
+      <td><b>Semantic Analysis of Chemical Patents</b>
+        <a href="javascript:;" onclick="javascript: $(this).next().toggle('slow');">Abstract</a>
+        <div class="hidden">
+Chemical patents are a rich source of technical and scientific information. They
+include meta−data, such as bibliographic information, as well as scientific data
+relating to reactions and synthesis experiments. However, they are lengthy,
+largely unstructured and rich in technical terminology such that it takes a
+signification amount of human efforts for analyses. This would make them an
+ideal candidate for 'semantification'. As a demonstration, an RDF triplestore of
+chemical patents is created. The patents, provided by the European Patent
+Office, are in an XML format. Document segmentation is used initially to extract
+the relevant information, mainly bibliographic information and experimental
+paragraphs. The experimental paragraphs are then processed using Natural
+Language Processing tools to extract the various components of the chemical
+reaction; roles, such as reactant, product or solvent, are then assigned. This
+extracted information is then converted into RDF and stored in a triplestore
+where it can then be queried, visualised and basic inferences can be made.The
+ultimate goal of this semantic representation, is to make data available and
+re−usable by the scientific community.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>15:15</td>
+      <td>David Wild</td>
+      <td><b>Data mining and querying of integrated chemical and biological
+         information using Chem2Bio2RDF</b>
+        <a href="javascript:;" onclick="javascript: $(this).next().toggle('slow');">Abstract</a>
+        <div class="hidden">
+We have recently developed a freely−available resource called
+<a href="http://chem2bio2rdf.org">Chem2Bio2RDF</a>
+that consists of chemical, biological and chemogenomic
+datasets in a consistent RDF framework, along with SPARQL querying tools that
+have been extended to allow chemical structure and similarity searching.
+Chem2Bio2RDF allows integrated querying that crosses chemical and biological
+information including compounds, publications, drugs, genes, diseases, pathways
+and side−effects. It has been used for a variety of applications including
+investigation of compound polypharmacology, linking drug side−effects to
+pathways, and identifying potential multi−target pathway inhibitors. In the work
+reported here, we describe a new set of tools and methods that we have developed
+for querying and data mining in Chem2Bio2RDF, including: Linked Path Generation
+(a method for automatically identifying paths between datasets and generating
+SPARQL queries from these paths); an ontology for integrated chemical and
+biological information; a Cytoscape plugin that allows dynamic querying and
+network visualization of query results; and a facet−based browser for browsing
+results.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>15:45</td>
+      <td>Qian Zhu</td>
+      <td><b> Mining and visualizing chemical compound−specific
+         Chemical−Gene/Disease/Pathway/Literature relationships</b>
+        <a href="javascript:;" onclick="javascript: $(this).next().toggle('slow');">Abstract</a>
+        <div class="hidden">
+In common with most scientific disciplines, there has in the last few years been
+a huge increase in the amount of publicly−available and proprietary information
+pertinent to drug discovery, owing to a variety of factors including
+improvements in experimental technologies. So the big challenge for us is how we
+can use all of this information together in an intelligent way, in an
+integrative fashion. We are developing an application to mine relationships
+between Chemical and Gene/Disease/Pathway/Literature, and visualize them. It
+aims to help answer the question “anything else should I know about this
+compound?” from a medicinal chemistry perspective based on the full picture of
+chemicals. For the mining part, we have already developed an aggregating web
+services, named WENDI, which calls multiple individual or atomic, web services
+including diversity of compound−related data sources, predictive models and
+self−developed algorithms, and aggregates the results from these services in
+XML; For visualizing, two ways to go: First, we create a RDF reasoner to convert
+XML from WENDI to RDF, find inferred relationships based on RDF, rank evidences
+focused on chemical−disease, and print all evidences out by using SWP faceted
+browser based on Longwell http://simile.mit.edu/wiki/Longwell), it mixes the
+flexibility of the RDF data model with the faceted browser to enable users to
+browse complex RDF triples in a user−friendly and meaningful manner; Second, we
+place all relationships from WENDI into a chemical space consisted of 60M
+PubChem compounds, then clustered/highlighted particular chemical compounds with
+specific attributes, like gene/disease/pathway/literature by using
+PubChemBrowse, which is a customized visualization tool for cheminformatics
+research and provides a novel 3D data point browser that displays complex
+properties of massive data on commodity clients and supports fast interaction
+with an external property database via semantic web interface.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>16:45</td>
+      <td></td>
+      <td>End</td>
+    </tr>
+    </table>
 
     <h2 id="organizers">Organizers</h2>
     <p>
