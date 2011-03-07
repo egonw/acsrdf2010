@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc} %unicode support
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
 \urlstyle{rm}
+\usepackage[pdftex]{graphicx}
  
 %\def\includegraphic{}
 %\def\includegraphics{}
@@ -173,14 +174,19 @@ hesitate to switch to RDF for describing quantum chemical data.)
 
 \ifthenelse{\boolean{publ}}{\end{multicols}}{}
 
+\clearpage
 
 \section*{Figures}
   \subsection*{Figure 1 - Keyword cloud for the \textit{RDF and Computation} session.}
+  \includegraphics[width=0.5\textwidth]{graphics/wordle_cinf003} 
 
   \subsection*{Figure 2 - Keyword cloud for the \textit{RDF and Ontologies} session.}
+  \includegraphics[width=0.5\textwidth]{graphics/wordle_cinf0031} 
 
   \subsection*{Figure 3 - Keyword cloud for the \textit{RDF and Chemical Applications} session.}
+  \includegraphics[width=0.5\textwidth]{graphics/wordle_cinf0032} 
 
+\clearpage
 
 \section*{Tables}
   \subsection*{Table 1 - Key W3C Specifications}
