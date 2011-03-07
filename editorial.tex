@@ -87,7 +87,8 @@ contributions
 
 The core RDF specification was introduced by the World Wide Web Consortium (W3C)
 in 1999~\cite{RDF1999} and defines the foundation for the RDF technologies. It has
-evolved into a set of six recommendations by W3C published in 2004 [RDF2004]. 
+evolved into a set of six recommendations by W3C published in 2004
+(See Table~1). 
 RDF specifies a very simple data structure linking an subject to an object or a
 value (literal) using a predicate. Cheminformaticians will recognize this data
 structure as an edge from graph theory. This structure allows us to represent
@@ -109,7 +110,7 @@ xxx on yyy, continues this
 
 With RDF we have a data structure to link resources and provide details about
 those resources. The next standard we will discuss now is the Web Ontology
-Language (OWL) which brought the RDF technology to the ontology community [OWL].
+Language (OWL) which brought the RDF technology to the ontology community~\cite{GUN2004}.
 Ontologies are most certainly not new to chemistry, or biology or life sciences,
 but the OWL standard makes it much easier to use ontologies. Ontologies, like
 controlled vocabularies and thesauri, describe what things mean, by linking
@@ -121,7 +122,7 @@ standards that describe the syntax by which RDF statements are exchanged, and
 various have been defined: RDF/XML is a XML-based serialization [], while
 simpler formats exist with N-Triples [] and Notation3 []. For integration with
 current web practises RDFa has been defined to allow RDF triples to be embedded
-in HTML pages []. Additionally, several proposals have been written that
+in HTML pages~\cite{RDFA2008}. Additionally, several proposals have been written that
 describe how RDF can be serialized JavaScript Object Notation (JSON) []. Several
 of these standards are used in the papers in this Series.
 
@@ -182,17 +183,20 @@ hesitate to switch to RDF for describing quantum chemical data.)
 
 
 \section*{Tables}
-  \subsection*{Table 1 - Sample table title}
-    Here is an example of a \emph{small} table in \LaTeX\ using  
-    \verb|\tabular{...}|. This is where the description of the table 
-    should go. \par \mbox{}
+  \subsection*{Table 1 - Key W3C Specifications}
+    Several of the key specifications and when they were
+    recommended by the World Wide Web Consortium. \par \mbox{}
     \par
     \mbox{
-      \begin{tabular}{|c|c|c|}
-        \hline \multicolumn{3}{|c|}{My Table}\\ \hline
-        A1 & B2  & C3 \\ \hline
-        A2 & ... & .. \\ \hline
-        A3 & ..  & .  \\ \hline
+      \begin{tabular}{lll}
+        Year & Technology & Description \\ 
+        \hline
+        1999 & RDF     & Resource Description Framework (RDF) Model and Syntax Specification~\cite{Lassila1999} \\
+        2004 & RDF/XML & RDF/XML Syntax Specification (Revised)~\cite{Beckett2004} \\
+             & RDF     & Resource Description Framework (RDF): Concepts and Abstract Syntax~\cite{Carroll2004}  \\
+             & OWL     & OWL Web Ontology Language Overview~\cite{OWL22009}\\
+        2007 & OWL2    & OWL 2 Web Ontology Language Document Overview~\cite{OWL22009}  \\
+        2008 & RDFa    & RDFa in XHTML: Syntax and Processing~\cite{RDFA2008} \\
       \end{tabular}
       }
 
