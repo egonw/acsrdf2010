@@ -104,8 +104,7 @@ this data structure as a hyperlink. This is not surprising, since RDF is the
 core technology behind the upcoming Semantic Web promoted by the
 W3C~\cite{BER2001}. Recent projects such as Bio2RDF~\cite{BEL2008} and
 Chem2Bio2RDF~\cite{CHE2010} have brought genomic, pharmaceutical and chemical knowledge to the
-Semantic Web by expressing it in RDF. The first paper in this special issue by
-xxx on yyy, continues this 
+Semantic Web by expressing it in RDF.
 
 (mb: will continue here Monday evening)
 
@@ -135,6 +134,20 @@ However, we also increasingly see RDF provided as a queriable database. …
 SPARQL....
 
 
+\section{Querying the World Wide Web}
+
+The most promising technologies in the RDF family is the
+SPARQL Query Language for RDF (SPARQL)~\cite{PrudHommeaux2008}, which has been
+used by Chen et al. in three chemogenomics use cases~\cite{CHE2010}. 
+One of the use cases shows ... "PubChem compounds (e.g. CID 5754) are identifiedthat are active in bioassays that are associated with protein targets, which are associated with genes (via UNIPROT), which are identified as those with which Dexamethasone interacts (via DrugBank). The resultant compounds are thus those that have a similar activity profile to Dexamethasone."
+
+A second use case shows ... "The drugs that are associated with hepatotoxicity-related side effects are associated with their targets using DrugBank. The targets are associated with pathways using KEGG to establish association chains between pathways and side-effects."
+
+Chen's Chem2Bio2RDF database aggregated RDF versions of various chemogenomics databases
+into one queryable repository. However, SPARQL also allows setting up federated
+queries that can retrieve information from different remote database at the same
+time, as was recently shown by Cheung et al.~\cite{Cheung2009}
+
 (mb: Egon, I think here we should summarize the status and give some outlook, eg. 
 - pharma is driving factor. impressive examples from papers in this domain
 - more work to be done to bring chemical compound databases and chemical names
@@ -159,6 +172,9 @@ n:m-relation in a relational database by using a connection table that is
 inserted into the database scheme with 1:n and 1:m relations), but this gets
 very cumbersome. This is why I and a research group at ETH (H.-P. Lüthi group)
 hesitate to switch to RDF for describing quantum chemical data.)
+
+
+\section{Outlook}
 
 
 
@@ -203,6 +219,7 @@ hesitate to switch to RDF for describing quantum chemical data.)
              & OWL     & OWL Web Ontology Language Overview~\cite{OWL22009}\\
         2007 & OWL2    & OWL 2 Web Ontology Language Document Overview~\cite{OWL22009}  \\
         2008 & RDFa    & RDFa in XHTML: Syntax and Processing~\cite{RDFA2008} \\
+             & SPARQL  & SPARQL Query Lanuage for RDF~\cite{PrudHommeaux2008} \\
       \end{tabular}
       }
 
