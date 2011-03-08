@@ -89,7 +89,7 @@ contributions
 \section{Concepts}
 
 The core RDF specification was introduced by the World Wide Web Consortium (W3C)
-in 1999~\cite{RDF1999} and defines the foundation for the RDF technologies. It has
+in 1999~\cite{Lassila1999} and defines the foundation for the RDF technologies. It has
 evolved into a set of six recommendations by W3C published in 2004
 (See Table~1). 
 RDF specifies a very simple data structure linking an subject to an object or a
@@ -116,9 +116,13 @@ and OpenTox~\cite{Hardy2010} have brought genomic, pharmaceutical and
 chemical knowledge to the Semantic Web by expressing it in RDF.
 These three projects aim at making databases with chemical knowledge
 available from a central access point, interlinking the individual
-data sets.
+data sets. Smaller data sets are also becoming available as RDF, such as
+the Open Notebook Science Solubility data~\cite{citeulike:5441072}.
 
 (mb: will continue here Monday evening)
+
+FIXME - more work to be done to bring chemical compound databases and chemical names
+to RDF; I see a gap there. In as far are PubChem and other repositories RDFised?
 
 \section{Formats}
 
@@ -138,6 +142,8 @@ These approaches make it simple to aggregate chemical data from the web.
 However, we also increasingly see RDF provided as a queriable database. …
 SPARQL....
 
+[ADD SCREENSHOT OF RDFa EXAMPLE]
+
 \section{Ontologies}
 
 With RDF we have a data structure to link resources and provide details about
@@ -148,6 +154,17 @@ but the OWL standard makes it much easier to use ontologies. Ontologies, like
 controlled vocabularies and thesauri, describe what things mean, by linking
 terms to a human-readable definition. As such, ontologies are used for sharing
 knowledge in a common language, as well as to organize that knowledge []. 
+
+[CITE WORK DUMONTIER AND OTHERS]
+
+FIXME:
+- OWL at present used to build up ontologies. These are used at present to
+interlink facts from different domains. 
+- problem of mapping different ontologies - should the cheminformatics community
+work towards a standard. How are standards organizations in chemistry (IUPAC,
+NIST etc.) taking up?
+- we are at present not at the point where chemical inferencing is done using
+RDF and OWL. Further work to be expected here
 
 
 \section{Querying the World Wide Web}
@@ -164,16 +181,9 @@ into one queryable repository. However, SPARQL also allows setting up federated
 queries that can retrieve information from different remote database at the same
 time, as was recently shown by Cheung et al.~\cite{Cheung2009}
 
+\section{Outlook}
+
 (mb: Egon, I think here we should summarize the status and give some outlook, eg. 
-- more work to be done to bring chemical compound databases and chemical names
-to RDF; I see a gap there. In as far are PubChem and other repositories RDFised?
-- OWL at present used to build up ontologies. These are used at present to
-interlink facts from different domains. 
-- problem of mapping different ontologies - should the cheminformatics community
-work towards a standard. How are standards organizations in chemistry (IUPAC,
-NIST etc.) taking up?
-- we are at present not at the point where chemical inferencing is done using
-RDF and OWL. Further work to be expected here
 - I see a need for statistical tools that can
 extract/aggregate/cluster/visualize RDF data in a chemical context
 - I see a problem with RDF to describe data that has multi-dimensional
@@ -187,11 +197,6 @@ n:m-relation in a relational database by using a connection table that is
 inserted into the database scheme with 1:n and 1:m relations), but this gets
 very cumbersome. This is why I and a research group at ETH (H.-P. Lüthi group)
 hesitate to switch to RDF for describing quantum chemical data.)
-
-
-\section{Outlook}
-
-
 
 
 \ifthenelse{\boolean{publ}}{\begin{multicols}{2}}{}
