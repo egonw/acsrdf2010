@@ -86,6 +86,8 @@ remainder of this editorial, we will briefly outline the various RDF
 technologies and their use in chemistry, and introduce authors and their
 contributions  
 
+\section{Concepts}
+
 The core RDF specification was introduced by the World Wide Web Consortium (W3C)
 in 1999~\cite{RDF1999} and defines the foundation for the RDF technologies. It has
 evolved into a set of six recommendations by W3C published in 2004
@@ -101,21 +103,24 @@ http://dbpedia.org/resource/Vanillin http://example.com/dissolvesIn http://dbped
 
 Those who know a bit about how web pages link to each other, may also recognize
 this data structure as a hyperlink. This is not surprising, since RDF is the
-core technology behind the upcoming Semantic Web promoted by the
-W3C~\cite{BER2001}. Recent projects such as Bio2RDF~\cite{BEL2008} and
-Chem2Bio2RDF~\cite{CHE2010} have brought genomic, pharmaceutical and chemical knowledge to the
-Semantic Web by expressing it in RDF.
+core technology behind the proposed Semantic Web~\cite{BER2001}. In fact, web
+nature is clear here, as one can use the URIs for vanillin and methanol to
+get further information on those two chemicals, by following the link
+by which they are represented. These molecules' URIs are said to be
+dereferencable, allowing to spider the web for information following
+the hyperlinks, quite like how you follow hyperlinks on web sites.
+Hence, the term Semantic Web.
+
+Recent projects such as Bio2RDF~\cite{BEL2008}, Chem2Bio2RDF~\cite{CHE2010},
+and OpenTox~\cite{Hardy2010} have brought genomic, pharmaceutical and
+chemical knowledge to the Semantic Web by expressing it in RDF.
+These three projects aim at making databases with chemical knowledge
+available from a central access point, interlinking the individual
+data sets.
 
 (mb: will continue here Monday evening)
 
-With RDF we have a data structure to link resources and provide details about
-those resources. The next standard we will discuss now is the Web Ontology
-Language (OWL) which brought the RDF technology to the ontology community~\cite{GUN2004}.
-Ontologies are most certainly not new to chemistry, or biology or life sciences,
-but the OWL standard makes it much easier to use ontologies. Ontologies, like
-controlled vocabularies and thesauri, describe what things mean, by linking
-terms to a human-readable definition. As such, ontologies are used for sharing
-knowledge in a common language, as well as to organize that knowledge []. 
+\section{Formats}
 
 The actual use of RDF depends on various further standards. For example, we need
 standards that describe the syntax by which RDF statements are exchanged, and
@@ -133,6 +138,17 @@ These approaches make it simple to aggregate chemical data from the web.
 However, we also increasingly see RDF provided as a queriable database. …
 SPARQL....
 
+\section{Ontologies}
+
+With RDF we have a data structure to link resources and provide details about
+those resources. The next standard we will discuss now is the Web Ontology
+Language (OWL) which brought the RDF technology to the ontology community~\cite{GUN2004}.
+Ontologies are most certainly not new to chemistry, or biology or life sciences,
+but the OWL standard makes it much easier to use ontologies. Ontologies, like
+controlled vocabularies and thesauri, describe what things mean, by linking
+terms to a human-readable definition. As such, ontologies are used for sharing
+knowledge in a common language, as well as to organize that knowledge []. 
+
 
 \section{Querying the World Wide Web}
 
@@ -149,7 +165,6 @@ queries that can retrieve information from different remote database at the same
 time, as was recently shown by Cheung et al.~\cite{Cheung2009}
 
 (mb: Egon, I think here we should summarize the status and give some outlook, eg. 
-- pharma is driving factor. impressive examples from papers in this domain
 - more work to be done to bring chemical compound databases and chemical names
 to RDF; I see a gap there. In as far are PubChem and other repositories RDFised?
 - OWL at present used to build up ontologies. These are used at present to
