@@ -41,7 +41,7 @@
 
 \address{%
     \iid(1)Division of Molecular Toxicology, Institute of Environmental Medicine, Karolinska Institutet, SE-17177 Stockholm, Sweden\\
-    \iid(2)Chemistry Biology Pharmacy Information Center, ETH Z\"urich, Z\"urich, Switzerland
+    \iid(2)Chemistry Biology Pharmacy Information Center, ETH Z\"urich, Wolfgang-Pauli-Str. 10, 8093 Z\"urich, Switzerland
 }%
 
 \maketitle
@@ -53,6 +53,8 @@
 %        \paragraph*{Conclusions:} Text for this section of the abstract \ldots
 %\end{abstract}
 
+% I don't think an abstract is required for an Editorial/mb
+
 The American Chemical Society (ACS) Division of Chemical Information (CINF)
 invited scientists from around the world to present their use of Resource
 Description Framework (RDF) technologies in chemistry on 22nd-23rd August 2010
@@ -60,9 +62,7 @@ at the 240th ACS National Meeting in Boston, USA. During three half-day
 sessions, the speakers demonstrated a mix of smaller and larger initiatives
 where RDF and related technologies are used in cheminformatics and
 bioinformatics as Open Standards for data exchange, common languages
-(ontologies), and problem solving. (mb: tried to improve this phrase, since it
-said before essentially the same thing as the previous sentence. Took text from
-a later part). The fifteen presentations were grouped in the themes computation,
+(ontologies), and problem solving. The fifteen presentations were grouped in the themes computation,
 ontologies, and chemical applications. Figures 1 to 3 display the most important
 keywords reflecting the abstracts of the talks in each session as word
 clouds~\cite{WORDLE}.
@@ -71,18 +71,12 @@ The goal of the meeting was to make more chemists aware of what the RDF Open
 Standard has to offer to chemistry. We are delighted to continue this effort
 with this thematic issue, for which the speakers (and others) have been invited
 to present their work in more detail to a wider chemistry community. The choice
-of an Open Access journal follows this goal. The article processing charges for
-this Thematic Series have been partially funded by Pfizer, Inc.  Pfizer, Inc.
-has had no input into the content of the publication or the articles themselves.
- All articles in the series have been independently prepared by the authors and
+of an Open Access journal follows this goal. At this place, we would like to thank Pfizer, Inc., 
+who had partially funded the article processing charges for this Thematic Series. Pfizer, Inc. has had no input into the content of the publication or the articles themselves.
+All articles in the series have been independently prepared by the authors and
 have been subject to the journal's standard peer review process.
 
-(mb: delete this part, moved to first paragraph) The meeting presented a mix of
-smaller and larger initiatives and research projects where RDF technologies are
-used as Open Standards for various tasks: data exchange, common languages
-(ontologies), and problem solving. These tasks use various standards all based
-on the underlying Resource Description Framework. (mb: /end delete)  In the
-remainder of this editorial, we will briefly outline the various RDF
+In the remainder of this editorial, we will briefly outline the various RDF
 technologies and their use in chemistry, and introduce authors and their
 contributions  
 
@@ -95,21 +89,18 @@ evolved into a set of six recommendations by W3C published in 2004
 RDF specifies a very simple data structure linking an subject to an object or a
 value (literal) using a predicate. Cheminformaticians will recognize this data
 structure as an edge from graph theory. This structure allows us to represent
-facts like “vanillin dissolves in methanol”~\cite{ONS2010}. Now, RDF uses Uniform
+facts like “vanillin dissolves in methanol”~\cite{ONS2010}. RDF uses Uniform
 Resource Identifiers (URIs) to identify things. Therefore, the RDF equivalent of
 the solution statement could be like this so-called triple:
 
 http://dbpedia.org/resource/Vanillin http://example.com/dissolvesIn http://dbpedia.org/resource/Methanol
 
-Those who know a bit about how web pages link to each other, may also recognize
-this data structure as a hyperlink. This is not surprising, since RDF is the
-core technology behind the proposed Semantic Web~\cite{BER2001}. In fact, web
-nature is clear here, as one can use the URIs for vanillin and methanol to
-get further information on those two chemicals, by following the link
-by which they are represented. These molecules' URIs are said to be
-dereferencable, allowing to spider the web for information following
-the hyperlinks, quite like how you follow hyperlinks on web sites.
-Hence, the term Semantic Web.
+Since URIs may be used to reference resources on any server worldwide, RDF triples allow to span a global graph data structure. 
+This is not surprising, since RDF is the core technology behind the proposed Semantic Web~\cite{BER2001}. In fact, the Web
+nature is clear here, as one can follow both the URIs for vanillin and methanol to
+obtain further information on those two chemicals. These molecules' URIs are said to be
+dereferenceable, allowing agents to spider the Web for information following
+the hyperlinks, quite like how you follow hyperlinks on websites. Hence, the term Semantic Web.
 
 Recent projects such as Bio2RDF~\cite{BEL2008}, Chem2Bio2RDF~\cite{CHE2010},
 and OpenTox~\cite{Hardy2010} have brought genomic, pharmaceutical and
@@ -117,12 +108,7 @@ chemical knowledge to the Semantic Web by expressing it in RDF.
 These three projects aim at making databases with chemical knowledge
 available from a central access point, interlinking the individual
 data sets. Smaller data sets are also becoming available as RDF, such as
-the Open Notebook Science Solubility data~\cite{citeulike:5441072}.
-
-(mb: will continue here Monday evening)
-
-FIXME - more work to be done to bring chemical compound databases and chemical names
-to RDF; I see a gap there. In as far are PubChem and other repositories RDFised?
+the Open Notebook Science Solubility data~\cite{citeulike:5441072}. 
 
 \section{Formats}
 
