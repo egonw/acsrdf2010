@@ -55,15 +55,27 @@
 
 % I don't think an abstract is required for an Editorial/mb
 
+Resource Description Framework (RDF) is providing the life sciences with new standards
+around data and knowledge management. The pick up in the life sciences is
+significantly higher from the pick up of the eXtensible Markup Language (XML)
+and even relational databases, as was recently shown by Splendiani et
+al.~\cite{Splendiani2011}. Chemistry is picking up these methods too.
+For example, Murray-Rust et al. used RDF already in 2004 to distribute
+news items where chemical structures were embedded~\cite{MurrayRust2004}
+and by Frey in a system which would now be referred to an
+electronic lab notebook (ELN)~\cite{Frey2004}. The use of the SPARQL
+query language goes back to 2007 where it was used in a system to annotate
+crystal structures~\cite{Hunter2007}.
+
 The American Chemical Society (ACS) Division of Chemical Information (CINF)
-invited scientists from around the world to present their use of Resource
-Description Framework (RDF) technologies in chemistry on 22nd-23rd August 2010
+invited scientists from around the world to present their use of RDF
+technologies in chemistry on 22nd-23rd August 2010
 at the 240th ACS National Meeting in Boston, USA. During three half-day
 sessions, the speakers demonstrated a mix of smaller and larger initiatives
 where RDF and related technologies are used in cheminformatics and
 bioinformatics as Open Standards for data exchange, common languages
 (ontologies), and problem solving. The fifteen presentations were grouped in the themes computation,
-ontologies, and chemical applications. Figures~1 to 3 display the most important
+ontologies, and chemical applications. Figures~\ref{fig:wordle1} to~\ref{fig:wordle3} display the most important
 keywords reflecting the abstracts of the talks in each session as word
 clouds~\cite{WORDLE}.
 
@@ -118,19 +130,45 @@ standards that describe the syntax by which RDF statements are exchanged, and
 various have been defined: RDF/XML is a XML-based serialization~\cite{Beckett2004}, while
 simpler formats exist with N-Triples [] and Notation3~\cite{BernersLee2006}. For integration with
 current web practises RDFa has been defined to allow RDF triples to be embedded
-in HTML pages~\cite{RDFA2008}. Additionally, several proposals have been written that
-describe how RDF can be serialized JavaScript Object Notation (JSON) [], and
+in HTML pages~\cite{RDFA2008}. Additionally, a proposal has been written that
+describe how RDF can be serialized as Javascript Object Notation (JSON)~\cite{Alexander2008}, and
+while this is not a formal specification yet,
 a new RDF working group will formalize this into one new standards~\cite{Herman2010}. Several
 of these serialization standards are used in the papers in this Series.
 
 Using these serializations, RDF can be downloaded directly from pure RDF
 documents (RDF/XML, Notation3), or extracted from RDFa-based webpages using
 online RDF extraction web services, like http://www.w3.org/2007/08/pyRdfa/.
-These approaches make it simple to aggregate chemical data from the web.
-However, we also increasingly see RDF provided as a queriable database. …
-SPARQL....
+These approaches make it simple to aggregate chemical data from web pages.
 
-[ADD SCREENSHOT OF RDFa EXAMPLE]
+\section{Querying the World Wide Web}
+
+The most promising technologies in the RDF family is the
+SPARQL Query Language for RDF (SPARQL)~\cite{PrudHommeaux2008}, which has been
+used by Chen et al. in three chemogenomics use cases~\cite{CHE2010}. 
+One of the use cases shows ... "PubChem compounds (e.g. CID 5754) are identifiedthat are active in bioassays that are associated with protein targets, which are associated with genes (via UNIPROT), which are identified as those with which Dexamethasone interacts (via DrugBank). The resultant compounds are thus those that have a similar activity profile to Dexamethasone."
+
+A second use case shows ... "The drugs that are associated with hepatotoxicity-related side effects are associated with their targets using DrugBank. The targets are associated with pathways using KEGG to establish association chains between pathways and side-effects."
+
+Chen's Chem2Bio2RDF database aggregated RDF versions of various chemogenomics databases
+into one queryable repository. However, SPARQL also allows setting up federated
+queries that can retrieve information from different remote database at the same
+time, as was recently shown by Cheung et al.~\cite{Cheung2009}
+
+The difference between SPARQL engines with query interfaces of relational databases
+is that they can be run on any RDF resource. For example, Jankowski used a public
+SPARQL service to extract boiling points of a series of alkanes from a XHTML
+webpage with the data made machine readable with RDFa, and visualized that using
+JavaScript in another web page dynamically~\cite{Jankowski2010} (see
+Figure~\ref{fig:bpSparql}).
+
+Moreover, another important difference is that SPARQL queries can be
+\textit{federated}~\cite{Prudhommeaux2007}.
+Federated SPARQL allows one to query various RDF providers in one query. This has
+been used recently in the Receptor Explorer tool to help translational research
+by connecting basic neuroscience research with clinical trials~\cite{Cheung2009}.
+Being able to query resources in this manner, brings us a step closer to
+systems approaches.
 
 \section{Ontologies}
 
@@ -154,20 +192,6 @@ NIST etc.) taking up?
 - we are at present not at the point where chemical inferencing is done using
 RDF and OWL. Further work to be expected here
 
-
-\section{Querying the World Wide Web}
-
-The most promising technologies in the RDF family is the
-SPARQL Query Language for RDF (SPARQL)~\cite{PrudHommeaux2008}, which has been
-used by Chen et al. in three chemogenomics use cases~\cite{CHE2010}. 
-One of the use cases shows ... "PubChem compounds (e.g. CID 5754) are identifiedthat are active in bioassays that are associated with protein targets, which are associated with genes (via UNIPROT), which are identified as those with which Dexamethasone interacts (via DrugBank). The resultant compounds are thus those that have a similar activity profile to Dexamethasone."
-
-A second use case shows ... "The drugs that are associated with hepatotoxicity-related side effects are associated with their targets using DrugBank. The targets are associated with pathways using KEGG to establish association chains between pathways and side-effects."
-
-Chen's Chem2Bio2RDF database aggregated RDF versions of various chemogenomics databases
-into one queryable repository. However, SPARQL also allows setting up federated
-queries that can retrieve information from different remote database at the same
-time, as was recently shown by Cheung et al.~\cite{Cheung2009}
 
 \section{Outlook}
 
@@ -201,14 +225,24 @@ hesitate to switch to RDF for describing quantum chemical data.)
 \clearpage
 
 \section*{Figures}
+
   \subsection*{Figure 1 - Keyword cloud for the \textit{RDF and Computation} session.}
+  \label{fig:wordle1}
   \includegraphics[width=0.5\textwidth]{graphics/wordle_cinf003} 
 
   \subsection*{Figure 2 - Keyword cloud for the \textit{RDF and Ontologies} session.}
+  \label{fig:wordle2}
   \includegraphics[width=0.5\textwidth]{graphics/wordle_cinf0031} 
 
   \subsection*{Figure 3 - Keyword cloud for the \textit{RDF and Chemical Applications} session.}
+  \label{fig:wordle3}
   \includegraphics[width=0.5\textwidth]{graphics/wordle_cinf0032} 
+
+  \subsection*{Figure 4 - Web page by Jankowski visualizing the boiling point of a series of
+  alkanes from Wiener~\cite{Wiener1947} extracted with SPARQL from a XHTML+RDFa web page at
+  \url{http://egonw.github.com/cheminformatics.classics/classic1.html}.}
+  \label{fig:bpSparql}
+  \includegraphics[width=0.7\textwidth]{graphics/sparqlGraphing1} 
 
 \clearpage
 
