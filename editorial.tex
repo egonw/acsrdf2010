@@ -204,21 +204,27 @@ improving provenance of data integration efforts.
 
 \section{Outlook}
 
-(mb: Egon, I think here we should summarize the status and give some outlook, eg. 
-- I see a need for statistical tools that can
-extract/aggregate/cluster/visualize RDF data in a chemical context
-- I see a problem with RDF to describe data that has multi-dimensional
-relations. In essence, an RDF triple describes a single relation. This works
-well for chemical descriptors that are one-dimensional, e.g. SubstanceX
-hasMeltingPoint 128degreeCelsisus. However, in physical and quantum chemistry,
-we have a lot of descriptors that are arrays or tensors, and you need a
-double/triple/multi-relation to describe an element of the array or tensor. Of
-course one can split down to several RDF triples (as one splits down a
-n:m-relation in a relational database by using a connection table that is
-inserted into the database scheme with 1:n and 1:m relations), but this gets
-very cumbersome. This is why I and a research group at ETH (H.-P. Lüthi group)
-hesitate to switch to RDF for describing quantum chemical data.)
+This Thematic Series shows the current state of the use of these methods in
+chemistry, as presented at the ACS RDF 2010 meeting in Boston. It provides an
+insight in where things are going. Much of the research is currently explorative,
+rather than formative, though standards are attempted to be proposed. 
+It may very well turn out that some aspects of chemistry will never be expressed
+in RDF, and some computation will be done without ontology-based reasoning. It is important
+to realize here where RDF is positioned, and this is for linking resources.
+Not all chemical data are resources, and we should not want to represent
+all data as resources.
+Because of the use of URIs, it is very verbose relative to other formats.
+There is no need to format already well-formalized data structures into
+RDF, such as the various uses of matrices in computational chemistry as
+RDF triples. In fact, several papers in this series outline how to
+combine knowledge expressed with RDF with computational services.
 
+The future of the use of RDF as open standards in chemistry looks
+bright, and fills the needs in chemistry for semantically linking
+chemical data to other data sources. The RDF technologies provide a
+domain-independent way for representing knowledge and the open
+nature assures many alternative approaches for making data available
+as RDF.
 
 \ifthenelse{\boolean{publ}}{\begin{multicols}{2}}{}
 
