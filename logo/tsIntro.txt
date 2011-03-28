@@ -1,0 +1,15 @@
+The American Chemical Society (ACS) Division of Chemical Information (CINF)
+invited scientists from around the world to present their use of RDF
+technologies in chemistry on 22nd-23rd August 2010
+at the 240th ACS National Meeting in Boston, USA. During three half-day
+sessions, the speakers demonstrated a mix of smaller and larger initiatives
+where Resource Description Framework (RDF) technologies are used in cheminformatics and
+bioinformatics as Open Standards for data exchange, common languages
+(ontologies), and problem solving. This Thematic Series introduces
+work presented at that meeting, showing the current advances in
+cheminformatics using these RDF technologies.
+Article processing charges for this Thematic Series have been partially
+funded by Pfizer, Inc.  Pfizer, Inc. has had no input into the content
+of the publication or the articles themselves.  All articles in the
+series have been independently prepared by the authors and have been
+subject to the journal's standard peer review process.
