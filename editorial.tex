@@ -173,25 +173,34 @@ systems approaches.
 \section{Ontologies}
 
 With RDF we have a data structure to link resources and provide details about
-those resources. The next standard we will discuss now is the Web Ontology
+those resources, and SPARQL provides us with the tools to aggregate that data.
+The next standard we will discuss now is the Web Ontology
 Language (OWL) which brought the RDF technology to the ontology community~\cite{GUN2004}.
-Ontologies are most certainly not new to chemistry, or biology or life sciences,
-but the OWL standard makes it much easier to use ontologies. Ontologies, like
+Ontologies are most certainly not new to chemistry~\cite{Gordon1988}, or biology or life sciences,
+but the OWL standard makes it much easier to use ontologies, partly because
+the are formulated in RDF themselves. Ontologies, like
 controlled vocabularies and thesauri, describe what things mean, by linking
 terms to a human-readable definition. As such, ontologies are used for sharing
-knowledge in a common language, as well as to organize that knowledge []. 
+knowledge in a common language, as well as to organize that knowledge.
+While linking resources is not new either, expressing the content of resources
+in explicit terms makes it more insightful steps are undertaken, and possible
+where sources of error are. Konyk, for example, have used OWL to link PubChem,
+DrugBank, and DBPedia~\cite{Konyk2008}, noting that it offers new ways to
+discover knowledge.
 
-[CITE WORK DUMONTIER AND OTHERS]
+There are currently not many ontologies in chemistry, but many OBO Foundry-based
+ontologies can be reused using OBO 2 OWL mapping~\cite{Moreira2007}. This makes
+available chemical ontologies like the CO ontology~\cite{Feldman2005}
+the ontology of Chemical Entities of Biological Interest (ChEBI)~\cite{Degtyarenko2008,Hull2008}
+and the Cheminformatics Ontology (\url{http://code.google.com/p/semanticchemistry/}),
+but also other ontologies in the life sciences, like the Gene Ontology~\cite{Aranguren2007}.
+This way, OWL provides a universal standard to link data sources in life
+sciences, transcending traditionaly boundaries between the various domains.
 
-FIXME:
-- OWL at present used to build up ontologies. These are used at present to
-interlink facts from different domains. 
-- problem of mapping different ontologies - should the cheminformatics community
-work towards a standard. How are standards organizations in chemistry (IUPAC,
-NIST etc.) taking up?
-- we are at present not at the point where chemical inferencing is done using
-RDF and OWL. Further work to be expected here
-
+The current state is that different resources are using different ontologies.
+This does not necessarily have to be a problem, because the ontologies can be
+explicitly mapped to each other. This way, the equivalence statement is formalized,
+improving provenance of data integration efforts.
 
 \section{Outlook}
 
