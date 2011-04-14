@@ -203,29 +203,59 @@ can be formally defined as equivalent, using the OWL predicates owl:equivalentCl
 and owl:equivalentProperty for classes, and owl:sameAs for instances.
 Making the equivalence explicit this way improves the provenance of data integration efforts. 
 
-\section{Outlook}
+\section{Discussion}
 
 This Thematic Series shows the current state of the use of RDF in
 chemistry, as presented at the ACS RDF 2010 meeting in Boston, and provides an
 insight into the progress of these methods. Much of the research is currently explorative,
-rather than formative, though standards are being proposed. 
+rather than formative, though standards are being proposed.
 It may very well turn out that some aspects of chemistry will never be expressed
 in RDF, and some computation will be done without ontology-based reasoning. It is important
 to realize here where RDF is positioned, namely for linking resources.
-Not all chemical data are resources, and we should not want to represent
-all data as resources.
-Because of the use of URIs, it is very verbose relative to other formats.
-There is no need to format already well-formalized data structures into
-RDF, such as the various uses of matrices in computational chemistry as
-RDF triples. In fact, several papers in this series outline how to
-combine knowledge expressed with RDF with computational services.
 
-The future of the use of RDF as open standards in chemistry looks
+However, the use of RDF for already well-defined data structures in chemistry
+is not obvious. Data types like connection tables and various matrices,
+is possible, but the use of URIs makes such structures needlessly verbose.
+Moreover, there is no need to format already well-formalized data structures into
+RDF, such as the various uses of matrices in computational chemistry as
+RDF triples.
+In fact, several papers in this series outline how to
+combine knowledge expressed with RDF with computational services.
+This shows that RDF is not an isolated framework, but one that can be
+integrated into existing cheminformatics workflows.
+
+What RDF does not solve, are the following issues that remain in
+cheminformatics. RDF is about knowledge representation, and while
+ontologies take care of meaning, it does not enfore any data quality,
+data structure, or data availability. This is, in fact, similar to other
+ways of providing data. For example, a data set with boiling points
+may or may not include information about experimental error.
+Metabolomics data may name the molecules for which concentration
+profiles have been measure, or the original accurate masses from
+which the identity was deduced.
+
+It must be clear, therefore, that the RDF technologies are not the solution
+to everything. Their use does not garantee an impressive scientific
+scenario. Instead, it can help simplify data analysis and particularly
+data integration, making it easier to handle large volumes of
+data accurately, or at least, with a explicitly defined accuracy.
+
+As such, the use of explicit, semantic formats can be considered
+a gold standard of scientific practise. It's about adding as much detail
+to your lab notebook as you need. But, it does not inhibit you
+from writing non-sense in your notebook.
+
+\section{Outlook}
+
+The future of the use of RDF technologies as open standards in chemistry looks
 bright, and fills the needs in chemistry for semantically linking
 chemical data to other data sources. RDF technologies provide a
 domain-independent way for representing knowledge and its open
 nature assures many alternative approaches for making data available
 as RDF.
+This Thematic Series shows a few novel and creative applications of
+these RDF technologies, and we hope they may serve as seminal work
+in cheminformatics for future years.
 
 \ifthenelse{\boolean{publ}}{\begin{multicols}{2}}{}
 
