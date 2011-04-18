@@ -59,7 +59,7 @@ The Resource Description Framework (RDF) is providing the life sciences with new
 around data and knowledge management. The uptake in the life sciences is
 significantly higher than the uptake of the eXtensible Markup Language (XML)
 and even relational databases, as was recently shown by Splendiani et
-al.~\cite{Splendiani2011}. Chemistry is adopting these methods too.
+al.~\cite{Splendiani2011} Chemistry is adopting these methods too.
 For example, Murray-Rust and coworkers used RDF already in 2004 to distribute
 news items where chemical structures were embedded using RDF Site Summary 1.0.~\cite{MurrayRust2004}
 Frey implemented a system which would now be referred to an
@@ -129,12 +129,12 @@ the Open Notebook Science Solubility data~\cite{citeulike:5441072}.
 The actual use of RDF depends on various further standards. For example, standards were required
 that describe how RDF statements are exchanged. Several standards
 serve this purpose: RDF/XML is an XML-based serialization~\cite{Beckett2004}, while
-easier formats exist with N-Triples~\cite{Beckett2004b} and Notation3.~\cite{BernersLee2006} For integration with
+simpler formats exist with N-Triples~\cite{Beckett2004b} and Notation3.~\cite{BernersLee2006} For integration with
 current web practices, RDFa has been defined to allow RDF triples to be embedded
 in HTML pages.~\cite{RDFA2008} Additionally, a proposal has been written that
 describe how RDF can be serialized as Javascript Object Notation (JSON)~\cite{Alexander2008}, and
 while this is not a formal specification yet,
-a new RDF working group will formalize this into a new standards.~\cite{Herman2010} Several
+a new RDF working group will formalize this into a new standard.~\cite{Herman2010} Several
 of these serialization standards are used in the papers in this Series.
 
 Using these serializations, RDF can be downloaded directly from pure RDF
@@ -145,7 +145,7 @@ These approaches make it simple to aggregate chemical data from web pages.
 \section{Querying the World Wide Web}
 
 The most promising technology in the RDF family is the
-SPARQL Query Language (SPARQL)~\cite{PrudHommeaux2008}, which has been
+SPARQL Protocol and RDF Query Language (SPARQL)~\cite{PrudHommeaux2008}, which has been
 applied by Chen et al. in three chemogenomics use cases.~\cite{CHE2010}
 One of the use cases shows how SPARQL queries are used to find compounds 
 that are active in bioassay for genes related to proteins
@@ -153,9 +153,9 @@ to which the chemical dexamethasone binds, using information
 from PubChem, Uniprot, and DrugBank, all made available as RDF in the Chem2Bio2RDF
 database. The other use cases in this paper use the same approach
 by aggregating data sources before querying them. As such, it is similar to
-querying data stored in a relational database. One difference between SPARQL
-engines and relational databases is that the former can be run on any
-RDF resource regardless of their data structure.
+querying data stored in a relational database. One difference between SPARQL engines and relational databases that the former can act on different RDF resources with an open graph data structure with the only requirement that the RDF resources must have some common elements, whereas relational DBMS assume an identical data structure for the complete database.
+
+%mb I'm not happy with this phrase: "One difference between SPARQL engines and relational databases is that the former can be run on any RDF resource regardless of their data structure.", because the latter  is also true for RDBMS.  SPARQL engines require an RDF graph datastructure, RDBMS a table-like data structure, so what? The problem of this phrase is that it does not explicate the type of data structure. Both SPARQL and SQL require a knowledge of the underlying data structure (in SQL a field/table name, in SPARQL a RDF predicate). In relational databases, the data structure is predefined and hence fixed, whereas in RDF it isn't because of its graph nature.
 
 For example, Jankowski used a public
 SPARQL service to extract boiling points of a series of alkanes from an XHTML
@@ -182,10 +182,12 @@ controlled vocabularies and thesauri, describe what things mean, by linking
 terms to a human-readable definition. As such, ontologies are used for sharing
 knowledge in a common language, as well as to organize that knowledge.
 While linking resources is not new either, expressing the content of resources
-in explicit terms makes it more insightful steps are undertaken, and possible
-where sources of error are. For example, Konyk et al. have used OWL to link PubChem,
+in explicit terms allows humans and software to reason formally on the content and to find possible sources of error.
+For example, Konyk et al. have used OWL to link PubChem,
 DrugBank, and DBPedia, noting that it offers new ways to
 discover knowledge~\cite{Konyk2008}.
+
+%mb changed phrase "While ..."
 
 There are currently not many ontologies in chemistry, but many OBO Foundry-based
 ontologies can be reused using an OBO to OWL mapping.~\cite{Moreira2007} This makes
@@ -201,7 +203,9 @@ This does not necessarily have to be a problem, because the ontologies can be
 explicitly mapped to each other. This way, equivalent terms from two ontologies
 can be formally defined as equivalent, using the OWL predicates owl:equivalentClass
 and owl:equivalentProperty for classes, and owl:sameAs for instances.
-Making the equivalence explicit this way improves the provenance of data integration efforts. 
+Making the equivalence explicit this way helps to illustrate the provenance of data integration efforts. 
+
+%mb Improved "Making the equivalence ..."
 
 \section{Discussion}
 
@@ -214,8 +218,8 @@ in RDF, and some computation will be done without ontology-based reasoning. It i
 to realize here where RDF is positioned, namely for linking resources.
 
 However, the use of RDF for already well-defined data structures in chemistry
-is not obvious. Data types like connection tables and various matrices,
-is possible, but the use of URIs makes such structures needlessly verbose.
+is not obvious. Data types like connection tables and various matrices are possible, 
+but the use of URIs makes such structures needlessly verbose.
 Moreover, there is no need to format already well-formalized data structures into
 RDF, such as the various uses of matrices in computational chemistry as
 RDF triples.
@@ -226,13 +230,16 @@ integrated into existing cheminformatics workflows.
 
 What RDF does not solve, are the following issues that remain in
 cheminformatics. RDF is about knowledge representation, and while
-ontologies take care of meaning, it does not enfore any data quality,
-data structure, or data availability. This is, in fact, similar to other
+ontologies take care of meaning and provide requirements to verify formal data consistency, 
+it does not enfore any data quality, data structure, or data availability. 
+This is, in fact, similar to other
 ways of providing data. For example, a data set with boiling points
 may or may not include information about experimental error.
 Metabolomics data may name the molecules for which concentration
 profiles have been measure, or the original accurate masses from
 which the identity was deduced.
+
+%mb improved "RDF is about knowledge representation, ..."
 
 It must be clear, therefore, that the RDF technologies are not the solution
 to everything. Their use does not garantee an impressive scientific
