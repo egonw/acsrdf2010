@@ -157,8 +157,9 @@ querying data stored in a relational database.
 However, an important difference between SPARQL and SQL query engines is
 the underlying data they act on: a graph of triples for RDF data, and
 rectangular tables in relational databases.
-
-%mb I'm not happy with this phrase: "One difference between SPARQL engines and relational databases is that the former can be run on any RDF resource regardless of their data structure.", because the latter  is also true for RDBMS.  SPARQL engines require an RDF graph datastructure, RDBMS a table-like data structure, so what? The problem of this phrase is that it does not explicate the type of data structure. Both SPARQL and SQL require a knowledge of the underlying data structure (in SQL a field/table name, in SPARQL a RDF predicate). In relational databases, the data structure is predefined and hence fixed, whereas in RDF it isn't because of its graph nature.
+This difference implies that RDF resources must have at least some
+common elements,  whereas a relational DBMS assumes an identical data
+structure for all records of a table."
 
 For example, Jankowski used a public
 SPARQL service to extract boiling points of a series of alkanes from an XHTML
