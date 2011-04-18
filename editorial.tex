@@ -153,7 +153,10 @@ to which the chemical dexamethasone binds, using information
 from PubChem, Uniprot, and DrugBank, all made available as RDF in the Chem2Bio2RDF
 database. The other use cases in this paper use the same approach
 by aggregating data sources before querying them. As such, it is similar to
-querying data stored in a relational database. One difference between SPARQL engines and relational databases that the former can act on different RDF resources with an open graph data structure with the only requirement that the RDF resources must have some common elements, whereas relational DBMS assume an identical data structure for the complete database.
+querying data stored in a relational database.
+However, an important difference between SPARQL and SQL query engines is
+the underlying data they act on: a graph of triples for RDF data, and
+rectangular tables in relational databases.
 
 %mb I'm not happy with this phrase: "One difference between SPARQL engines and relational databases is that the former can be run on any RDF resource regardless of their data structure.", because the latter  is also true for RDBMS.  SPARQL engines require an RDF graph datastructure, RDBMS a table-like data structure, so what? The problem of this phrase is that it does not explicate the type of data structure. Both SPARQL and SQL require a knowledge of the underlying data structure (in SQL a field/table name, in SPARQL a RDF predicate). In relational databases, the data structure is predefined and hence fixed, whereas in RDF it isn't because of its graph nature.
 
