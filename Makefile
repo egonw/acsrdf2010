@@ -5,14 +5,14 @@ all: editorial.pdf
 
 update: editorial.pdf
 
-refresh.bibtex:
-	@touch refresh.bibtex
+#refresh.bibtex:
+#	@touch refresh.bibtex
 
-editorial.bib: refresh.bibtex custom.bib
-	@echo "" > editorial.bib
-	@cat custom.bib >> editorial.bib
-	@wget -O - http://www.citeulike.org/bibtex/group/14373 >> editorial.bib
-	@touch refresh.bibtex
+#editorial.bib: refresh.bibtex custom.bib
+#	@echo "" > editorial.bib
+#	@cat custom.bib >> editorial.bib
+#	@wget -O - http://www.citeulike.org/bibtex/group/14373 >> editorial.bib
+#	@touch refresh.bibtex
 
 editorial.bbl: editorial.bib
 	pdflatex editorial || true
